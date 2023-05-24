@@ -5,22 +5,8 @@
       :mobile-breakpoint="768"
       app
     >
-      <v-img
-        class="pa-4 pt-7"
-        height="170"
-        src="blood.jpg"
-      >
-        <v-avatar>
-          <img
-            size="70"
-            src="https://cdn.vuetifyjs.com/images/john.jpg"
-            alt="John"
-            class="mb-1"
-          />
-        </v-avatar>
         <div class="white--text text-subtitle-1 font-weight-bold">John Dow</div>
         <div class="white--text text-subtitle-2">@johnny_dow</div>
-      </v-img>
       <v-list
         dense
         nav
