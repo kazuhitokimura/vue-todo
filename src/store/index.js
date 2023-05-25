@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Localbase from 'localbase'
+import '../styles/main.sass'
 
 // docs: https://github.com/dannyconnell/localbase#disable-the-gorgeous-logs
 let db = new Localbase('db')

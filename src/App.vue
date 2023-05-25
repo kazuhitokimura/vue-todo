@@ -5,11 +5,10 @@
       :mobile-breakpoint="768"
       app
     >
-        <div class="white--text text-subtitle-1 font-weight-bold">John Dow</div>
-        <div class="white--text text-subtitle-2">@johnny_dow</div>
       <v-list
         dense
         nav
+        class="mt-15"
       >
         <v-list-item
           v-for="item in items"
@@ -29,37 +28,18 @@
 
     <v-app-bar
       app
-      dark
-      prominent
-      height="170"
-      src="blood.jpg"
+      elevation="0"
     >
-      <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-        ></v-img>
-      </template>
       <v-container class="header-container pa-0">
           <v-row class="py-3">
-            <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-            <v-spacer></v-spacer>
-            <tools-search 
-              v-if="$route.path === '/'"
-            />
           </v-row>
           <v-row class="px-3 text-h4">
-            <v-app-bar-title>
-              {{ $store.state.appTitle }}
-            </v-app-bar-title>
-          </v-row>
-          <v-row class="px-3">
-            <live-date-time />
           </v-row>
         </v-container>
     </v-app-bar>
     <v-main>
-      <v-container 
-        fluid 
+      <v-container
+        fluid
         class="pa-0"
       >
         <router-view></router-view>
@@ -74,14 +54,12 @@
     data: () => ({ 
       drawer: null,
       items: [
-        { title: 'Todo', icon: 'mdi-checkbox-marked-circle-plus-outline', to: '/' },
-        { title: 'About', icon: 'mdi-cards-heart-outline', to: '/about' },
+        { title: 'メニュー', icon: 'mdi-emoticon-outline', to: '/' },
+        { title: 'メニュー', icon: 'mdi-emoticon-outline', to: '/about' },
       ]
     }),
     components: {
       'snackbar': require('@/components/Shared/Snackbar.vue').default,
-      'tools-search': require('@/components/Tools/Search.vue').default,
-      'live-date-time': require('@/components/Tools/LiveDateTime.vue').default,
     },
     mounted() {
       this.$store.dispatch('getTasks')
