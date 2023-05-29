@@ -29,6 +29,7 @@
     <v-app-bar
       app
       elevation="0"
+      color="#ffffff"
     >
       <v-container class="header-container pa-0">
           <v-row class="py-3">
